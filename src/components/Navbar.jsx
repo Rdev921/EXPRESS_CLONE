@@ -61,15 +61,10 @@ import {
                KIDS
             </Flex>
             </RoutesLink>
-            <RoutesLink to="/cart">
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-               CART
-            </Flex>
-            </RoutesLink>
           </Flex>
  
          
-         <Flex justifyContent={"space-between"}>
+        
          <RoutesLink to="/login">
             <Button
               as={'a'}
@@ -81,7 +76,7 @@ import {
               SIGN IN
             </Button>
             </RoutesLink>
-            </Flex>
+          
 
             <Flex justifyContent={'space-around'}>
             <RoutesLink to="/register">

@@ -11,12 +11,12 @@ import {
   import {Link as RouterLink } from "react-router-dom";
  
  
-  export default function ProductCard(props) {
-    const {category,id,image,price,rating,title}=props
+  export default function ProductMenCard(props) {
+    const {category,id,image,discountPrice,discount,price,brand}=props
      
     return (
         <Center py={12}>
-          <RouterLink to={`/products/${id}`}>
+          <RouterLink to={`/men/${id}`}>
         <Box
           role={'group'}
           p={6}
@@ -31,7 +31,7 @@ import {
             rounded={'lg'}
             mt={-12}
             pos={'relative'}
-            height={'230px'}
+            height={'300px'}
             _after={{
               transition: 'all .3s ease',
               content: '""',
@@ -51,28 +51,31 @@ import {
             }}>
             <Image
               rounded={'lg'}
-              height={230}
+              height={330}
               width={282}
               objectFit={'cover'}
               src={image}
             />
           </Box>
           <Stack pt={10} align={'center'}>
-            <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-             {title}
+            <Text color={'gray.500'} fontSize={'2sm'} textTransform={'uppercase'} textDecoration={'line-through'}>
+             MRP:{price}
             </Text>
-            <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+            <Heading fontSize={'2sm'} fontFamily={'body'} fontWeight={500}>
               {category}
             </Heading>
             <Stack direction={'row'} align={'center'}>
              
-              <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-              Price: {price}
+              <Heading fontSize={'2sm'} fontFamily={'body'} fontWeight={500}>
+               {discountPrice}
             </Heading>
              
             </Stack>
-              <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-               Rating : {rating}
+              <Heading fontSize={'sm'} fontFamily={'body'} fontWeight={500}>
+              {discount}
+            </Heading>
+              <Heading fontSize={'sm'} fontFamily={'body'} fontWeight={500}>
+              {brand}
             </Heading>
           </Stack>
         </Box>

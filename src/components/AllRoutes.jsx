@@ -7,7 +7,9 @@ import Men from '../pages/Men'
 import Register from '../pages/Register'
 import SingleProductPage from '../pages/SingleProductPage'
 import Women from '../pages/Women'
-import Cart from './Cart'
+
+import SinglePage from './SinglePage'
+
 function AllRoutes() {
   return (
     <Routes>
@@ -15,12 +17,13 @@ function AllRoutes() {
       <Route path='/women' element={<Women />}></Route>
       <Route path='/men' element={<Men />}></Route>
       <Route path='/kids' element={<Kids />}></Route>
-      <Route path='/cart' element={<Cart />}></Route>
-      <Route path='/login' element={<Login />}>LOGIN</Route>
-      <Route path='/register' element={<Register />}>REGISTER</Route>
+      {/* <Route path='/cart' element={<Cart />}></Route> */}
+      <Route path='/login' element={<Login />}></Route>
+      <Route path='/register' element={<Register />}></Route>
       <Route path='/men/:id' element={<SingleProductPage/>} />
       <Route path='/women/:id' element={<SingleProductPage/>} />
       <Route path='/kids/:id' element={<SingleProductPage/>} />
+  
     </Routes>
   )
 }
