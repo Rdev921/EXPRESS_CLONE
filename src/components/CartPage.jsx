@@ -1,5 +1,6 @@
-import { Box, Button, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Grid, GridItem, Heading, HStack, Image, Text, VStack } from '@chakra-ui/react'
 import axios from 'axios'
+import {FaRegTrashAlt} from 'react-icons/fa';
 import React, { useEffect, useState } from 'react'
  import { Link as RouterLink } from 'react-router-dom'
  const CartPage = () => {
@@ -57,48 +58,54 @@ const handleQuantity=(id, Quantity , val)=>{
    
 }
 
-
-
-
-
-
    return (
-    <Box>
+    <Box mt={'50'} ml={20} >
+    <Flex>
      <Grid  gap={5}>
          {
           data?.map((cart)=>(
-            <GridItem key={cart.id} border = {"1px solid red"} display = "flex"   >
-              <Image src={cart.src} alt="cart image" h={300} w= {300} />
+            <GridItem key={cart.id} display = "flex"   >
+            <HStack >
               <Box>
-               {/* <Text fontSize={25}>{cart.Category}</Text> */}
-               <Text fontSize={20}>Price : {cart.discountPrice}</Text>
-               <Text fontSize={20}>discount :{`${cart.discount}% Off`}</Text>
-               <Text fontSize={17}>{`Shipping`}</Text>
-               <Text>International orders usually arrive within <br />
-                   5–13 business days. We'll give you shipping    <br />
-                    dates in checkout.</Text>
+              <Image src={cart.src} alt="cart image" h={150} w= {150} boxShadow={'rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px ;'} borderRadius={'50%'} />
+              </Box>  
+
+            </HStack>
+              <Box>
+            <HStack ml={30}>
+              <VStack mt={10} ml={10}>
+               <Text fontSize={17}>₹{cart.discountPrice}</Text>
+               <Text fontSize={13}>discount :{`${cart.discount}`}</Text>
+               </VStack>
                {/* Buttons Quantity */}
                <Box>
-                <Button isDisabled = {cart.Quantity===1} onClick={()=> handleQuantity(cart.id , cart.Quantity ,  -1)}>-</Button>
-
-
+               <HStack mt={10} ml={10}>
+                <Button bg={'red.500'} isDisabled = {cart.Quantity===1} onClick={()=> handleQuantity(cart.id , cart.Quantity ,  -1)}>-</Button>
                 <Button  >{cart.Quantity}</Button>
+                <Button  bg={'green.600'} onClick={()=> handleQuantity(cart.id , cart.Quantity , 1)}>+</Button>
+                <Box >
+               <Button  bg={'red.600'} onClick={()=> handleDelete(cart.id)} ><FaRegTrashAlt/></Button>
+                </Box>
 
-
-                <Button onClick={()=> handleQuantity(cart.id , cart.Quantity , 1)}>+</Button>
-
-
+               </HStack>
                </Box>
-               <Button onClick={()=> handleDelete(cart.id)}> Remove</Button>
+               </HStack>
                </Box>
             </GridItem>
           ))
          }
-         <Text  fontSize={20} flex={'flex-end'}>Subtotal : {total}</Text >
-         <RouterLink to="/address">
-         <Button bg="green" >CheckOut</Button>
-         </RouterLink>
+        
+
+        
      </Grid>
+     <Box ml={250}>
+        <Text  fontSize={20} flex={'flex-end'} mt={200} ml={50} mb={10}>Subtotal : {total}</Text >
+        <RouterLink to="/address">
+         <Button bg='#ffc32a ' border={'none'} w={300} color={'black'} >Place Order</Button>
+         </RouterLink>
+     </Box>
+     </Flex>
+     
      </Box>
    )
  }

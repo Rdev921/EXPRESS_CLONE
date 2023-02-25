@@ -871,7 +871,59 @@
       "whatsApp": ""
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": 63,
+      "href": "https://www.limeroad.com/dark-blue-cotton-vida-loca-p18454625?imgIdx=3&src_id=navdeskKurtas__100",
+      "bxs1": "",
+      "src": "https://img3.junaroad.com/uiproducts/18454625/zoom_0-1659425389.jpg",
+      "Category": "kurta",
+      "discountPrice": "749",
+      "Quantity": 4,
+      "MRP": 499,
+      "discount": "70% off",
+      "c9 href": "https://www.limeroad.com/brand/vida-loca-71914?src_id=navdeskKurtas__100"
+    },
+    {
+      "id": 52,
+      "href": "https://www.limeroad.com/black-cotton-vida-loca-p18519113?imgIdx=3&src_id=navdeskKurtas__100",
+      "bxs1": "",
+      "src": "https://img3.junaroad.com/uiproducts/18519113/zoom_0-1662825431.jpg",
+      "Category": "kurta",
+      "discountPrice": "849",
+      "Quantity": 2,
+      "MRP": 499,
+      "discount": "66% off",
+      "c9 href": "https://www.limeroad.com/brand/vida-loca-71914?src_id=navdeskKurtas__100",
+      "translation_missing": "Vida Loca"
+    },
+    {
+      "id": 55,
+      "href": "https://www.limeroad.com/gold-silk-blend-jompers-p19148006?imgIdx=3&src_id=navdeskKurtas__100",
+      "bxs1": "",
+      "src": "https://img3.junaroad.com/uiproducts/19148006/zoom_0-1673333176.jpg",
+      "Category": "kurta",
+      "discountPrice": "849",
+      "Quantity": 1,
+      "MRP": 999,
+      "discount": "58% off",
+      "c9 href": "https://www.limeroad.com/brand/jompers-77700?src_id=navdeskKurtas__100"
+    },
+    {
+      "id": 50,
+      "href": "https://www.limeroad.com/green-cotton-mode-connection-p19300357?imgIdx=3&src_id=navdeskKurtas__100",
+      "bxs1": "New",
+      "src": "https://img3.junaroad.com/uiproducts/19300357/zoom_0-1675323942.jpg",
+      "Category": "kurta",
+      "discountPrice": "1299",
+      "Quantity": 1,
+      "MRP": 499,
+      "discount": "48% off",
+      "c9 href": "https://www.limeroad.com/brand/mode-connection-54668?src_id=navdeskKurtas__100",
+      "translation_missing": "",
+      "tdN href": "https://api.whatsapp.com/send?text=Checkout+this+amazing+product+at+Limeroad%21%20Don%27t+miss+out%21%20https://www.limeroad.com/green-cotton-mode-connection-p19300357?imgIdx=3&src_id=navdeskKurtas__100"
+    }
+  ],
   "address": [
     {
       "email": "",
@@ -911,6 +963,32 @@
       "Phone": "",
       "Location": "",
       "id": 3
+    },
+    {
+      "email": "",
+      "first_Name": "",
+      "Last_Name": "",
+      "Address": "",
+      "Address2": "",
+      "Postal_Code": "",
+      "City": "",
+      "Region": "",
+      "Phone": "",
+      "Location": "",
+      "id": 4
+    },
+    {
+      "email": "",
+      "first_Name": "",
+      "Last_Name": "",
+      "Address": "",
+      "Address2": "",
+      "Postal_Code": "",
+      "City": "",
+      "Region": "",
+      "Phone": "",
+      "Location": "",
+      "id": 5
     }
   ]
 }
