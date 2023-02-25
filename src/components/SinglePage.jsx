@@ -14,10 +14,24 @@ import {
     List,
     ListItem,
   } from '@chakra-ui/react';
+import axios from 'axios';
   import { MdLocalShipping } from 'react-icons/md';
- 
+import { useNavigate } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
   export default function SinglePage(props) {
+    let navigate  = useNavigate();
 
+    const handlePost = async()=>{
+      try {
+        return axios({
+          method:'post',
+          url:'http://localhost:8080/cart',
+          data:props
+        }).then((res)=>console.log(res.data))
+      } catch (error) {
+        console.log(error);
+      }
+    }
 
     const {src } =props;
     return (
@@ -35,8 +49,9 @@ import {
               }
               fit={'cover'}
               align={'center'}
-              w={'100%'}
-              h={{ base: '100%', sm: '800px', lg: '900px' }}
+              w={'80%'}
+              marginLeft={30}
+              h={{ base: '100%', sm: '800px', lg: '600px' }}
             />
           </Flex>
           <Stack spacing={{ base: 6, md: 10 }}>
@@ -44,14 +59,14 @@ import {
               <Heading
                 lineHeight={1.1}
                 fontWeight={600}
-                fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-                Automatic Watch
+                fontSize={{ base: '2xl', sm: '4xl', lg: '2xl' }}>
+                {props.translation_missing}
               </Heading>
               <Text
                 color={useColorModeValue('gray.900', 'gray.400')}
                 fontWeight={300}
-                fontSize={'2xl'}>
-                $350.00 USD
+                fontSize={'xl'}>
+                {props.MRP}
               </Text>
             </Box>
  
@@ -63,7 +78,7 @@ import {
                   borderColor={useColorModeValue('gray.200', 'gray.600')}
                 />
               }>
-              <VStack spacing={{ base: 4, sm: 6 }}>
+              <VStack spacing={{ base: 2, sm: 4 }}>
                 <Text
                   color={useColorModeValue('gray.500', 'gray.400')}
                   fontSize={'2xl'}
@@ -159,6 +174,7 @@ import {
               </Box>
             </Stack>
  
+             <RouterLink to='/cart'>
             <Button
               rounded={'none'}
               w={'full'}
@@ -168,13 +184,15 @@ import {
               bg={useColorModeValue('gray.900', 'gray.50')}
               color={useColorModeValue('white', 'gray.900')}
               textTransform={'uppercase'}
+              onClick={()=>handlePost()}
               _hover={{
                 transform: 'translateY(2px)',
                 boxShadow: 'lg',
               }}>
               Add to cart
             </Button>
- 
+            </RouterLink>
+
             <Stack direction="row" alignItems="center" justifyContent={'center'}>
               <MdLocalShipping />
               <Text>2-3 business days delivery</Text>

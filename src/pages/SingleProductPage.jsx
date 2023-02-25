@@ -7,9 +7,9 @@ import SinglePage from '../components/SinglePage';
 
 
 const SingleProductPage = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({ });
   let {id}=useParams();
-  console.log(id);
+  console.log(id);              
     const getData= async (id)=>{
         return axios({
             method : "get" ,

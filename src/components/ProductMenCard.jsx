@@ -12,7 +12,7 @@ import {
  
  
   export default function ProductMenCard(props) {
-    const {category,id,image,discountPrice,discount,price,brand}=props
+    const {category,id,image,discountPrice,discount,price,brand}=props;
      
     return (
         <Center py={12}>
@@ -39,8 +39,7 @@ import {
               h: 'full',
               pos: 'absolute',
               top: 5,
-              left: 0,
-             
+              left: 0,  
               filter: 'blur(15px)',
               zIndex: -1,
             }}
