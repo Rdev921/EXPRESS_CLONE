@@ -32,7 +32,7 @@ const handleDelete = async (id)=>{
  
 useEffect(() => {
   getCartItems()
-}, [ ])
+}, [ data])
 
 
 // Total

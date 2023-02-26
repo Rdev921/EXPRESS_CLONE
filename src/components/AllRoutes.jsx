@@ -1,15 +1,18 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Address from '../pages/Address'
+import Admin from '../pages/Admin'
 import Home from '../pages/Home'
 import Kids from '../pages/Kids'
 import Login from '../pages/Login'
 import Men from '../pages/Men'
 import PaymentPage from '../pages/PaymentPage'
 import Register from '../pages/Register'
-import SingleProductPage from '../pages/SingleProductPage'
 import Women from '../pages/Women'
 import Cart from './CartPage'
+import MenDetailsPage from '../pages/MenDetailsPage'
+import WomenDetailsPage from '../pages/WomenDetailsPage'
+import KidsDetailsPage from '../pages/KidsDetailsPage'
 
 
 function AllRoutes() {
@@ -24,9 +27,10 @@ function AllRoutes() {
       <Route path='/register' element={<Register />}></Route>
       <Route path='/address' element={<Address />}></Route>
       <Route path='/payment' element={<PaymentPage />}></Route>
-      <Route path='/men/:id' element={<SingleProductPage/>} />
-      <Route path='/women/:id' element={<SingleProductPage/>} />
-      <Route path='/kids/:id' element={<SingleProductPage/>} />
+      <Route path='/admin' element={<Admin   />}></Route>
+      <Route path='/men/:id' element={<MenDetailsPage/>} />
+      <Route path='/women/:id' element={<WomenDetailsPage/>} />
+      <Route path='/kids/:id' element={<KidsDetailsPage/>} />
   
     </Routes>
   )

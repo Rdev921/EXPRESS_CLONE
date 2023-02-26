@@ -6,7 +6,7 @@ import SinglePage from '../components/SinglePage';
  
 
 
-const SingleProductPage = () => {
+const MenDetailsPage = () => {
   const [data, setData] = useState({ });
   let {id}=useParams();
   console.log(id);              
@@ -44,4 +44,4 @@ const SingleProductPage = () => {
 }
 
 
-export default SingleProductPage
+export default MenDetailsPage;

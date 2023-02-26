@@ -3,7 +3,7 @@ import axios from "axios";
 import { useReducer } from "react";
 import { Grid, GridItem } from '@chakra-ui/react'
 import ProductReducer from '../reducer/ProductReducer'
-import ProductCard from "../components/ProductMenCard";
+import ProductKidsCard from "../components/ProductKidsCard";
 
 let initialState={
     products:[],
@@ -40,7 +40,7 @@ function Kids() {
             {
               products?.length>0 && products.map((e)=>{
                 return  <GridItem key={e.id} w='100%'  >
-                     <ProductCard
+                     <ProductKidsCard
                      id={e.id}
                      category={e.category}
                      discountPrice={e.discountPrice}

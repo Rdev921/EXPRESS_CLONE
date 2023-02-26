@@ -36,7 +36,7 @@ function Men() {
             isErr ?   <h1>Something went Wrong ! </h1> :
         (
         <div>
-          <Grid templateColumns='repeat(4, 1fr)' gap={6}>
+          <Grid templateColumns="repeat(auto-fill, minmax(300px, 1fr))" gap={6}>
             {
               products?.length>0 && products.map((e)=>{
                 return  <GridItem key={e.id} w='100%'  >
